@@ -191,6 +191,10 @@
 		3BAC39F317242E5D00473974 /* NumberlikeArray.hh in Headers */ = {isa = PBXBuildFile; fileRef = 3BAC39E517242E5D00473974 /* NumberlikeArray.hh */; };
 		AA747D9F0F9514B9006C5449 /* ZXingWidget_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ZXingWidget_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		AD445BF8176976E500F66D87 /* UIImage+Accessory.h in Headers */ = {isa = PBXBuildFile; fileRef = AD445BF6176976E500F66D87 /* UIImage+Accessory.h */; };
+		AD445BF9176976E500F66D87 /* UIImage+Accessory.m in Sources */ = {isa = PBXBuildFile; fileRef = AD445BF7176976E500F66D87 /* UIImage+Accessory.m */; };
+		AD445BFC1769771300F66D87 /* BlackOverlayView.h in Headers */ = {isa = PBXBuildFile; fileRef = AD445BFA1769771300F66D87 /* BlackOverlayView.h */; };
+		AD445BFD1769771300F66D87 /* BlackOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD445BFB1769771300F66D87 /* BlackOverlayView.m */; };
 		E534594311987396000CB77F /* BarcodeFormat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E53458B511987396000CB77F /* BarcodeFormat.cpp */; };
 		E534594411987396000CB77F /* BarcodeFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = E53458B611987396000CB77F /* BarcodeFormat.h */; };
 		E534594511987396000CB77F /* Binarizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E53458B711987396000CB77F /* Binarizer.cpp */; };
@@ -509,6 +513,10 @@
 		3BAC39E517242E5D00473974 /* NumberlikeArray.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NumberlikeArray.hh; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* ZXingWidget_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXingWidget_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AD445BF6176976E500F66D87 /* UIImage+Accessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Accessory.h"; sourceTree = "<group>"; };
+		AD445BF7176976E500F66D87 /* UIImage+Accessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Accessory.m"; sourceTree = "<group>"; };
+		AD445BFA1769771300F66D87 /* BlackOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlackOverlayView.h; sourceTree = "<group>"; };
+		AD445BFB1769771300F66D87 /* BlackOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackOverlayView.m; sourceTree = "<group>"; };
 		D2AAC07E0554694100DB518D /* libZXingWidget.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libZXingWidget.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E53458B511987396000CB77F /* BarcodeFormat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BarcodeFormat.cpp; sourceTree = "<group>"; };
 		E53458B611987396000CB77F /* BarcodeFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarcodeFormat.h; sourceTree = "<group>"; };
@@ -702,7 +710,11 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AD445BF6176976E500F66D87 /* UIImage+Accessory.h */,
+				AD445BF7176976E500F66D87 /* UIImage+Accessory.m */,
 				3B248F9614EF3AF80065F0DA /* AztecReader.h */,
+				AD445BFA1769771300F66D87 /* BlackOverlayView.h */,
+				AD445BFB1769771300F66D87 /* BlackOverlayView.m */,
 				3B248F9714EF3AF80065F0DA /* AztecReader.mm */,
 				1D603E6213E20AF1006F4B51 /* ArrayAndStringCategories.h */,
 				1D603E6313E20AF1006F4B51 /* ArrayAndStringCategories.m */,
@@ -1352,6 +1364,8 @@
 				3BAC39EF17242E5D00473974 /* BigUnsigned.hh in Headers */,
 				3BAC39F117242E5D00473974 /* BigUnsignedInABase.hh in Headers */,
 				3BAC39F317242E5D00473974 /* NumberlikeArray.hh in Headers */,
+				AD445BF8176976E500F66D87 /* UIImage+Accessory.h in Headers */,
+				AD445BFC1769771300F66D87 /* BlackOverlayView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1610,6 +1624,8 @@
 				3BAC39EC17242E5D00473974 /* BigIntegerUtils.cc in Sources */,
 				3BAC39EE17242E5D00473974 /* BigUnsigned.cc in Sources */,
 				3BAC39F017242E5D00473974 /* BigUnsignedInABase.cc in Sources */,
+				AD445BF9176976E500F66D87 /* UIImage+Accessory.m in Sources */,
+				AD445BFD1769771300F66D87 /* BlackOverlayView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

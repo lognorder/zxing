@@ -28,27 +28,27 @@
 #endif
 
 @interface ZXingWidgetController : UIViewController<DecoderDelegate,
-                                                    CancelDelegate,
-                                                    UINavigationControllerDelegate
+CancelDelegate,
+UINavigationControllerDelegate
 #if HAS_AVFF
-                                                    , AVCaptureVideoDataOutputSampleBufferDelegate
+, AVCaptureVideoDataOutputSampleBufferDelegate
 #endif
-                                                    > {
-  NSSet *readers;
-  ParsedResult *result;
-  OverlayView *overlayView;
-  SystemSoundID beepSound;
-  BOOL showCancel;
-  NSURL *soundToPlay;
-  id<ZXingDelegate> delegate;
-  BOOL wasCancelled;
-  BOOL oneDMode;
+> {
+    NSSet *readers;
+    ParsedResult *result;
+    OverlayView *overlayView;
+    SystemSoundID beepSound;
+    BOOL showCancel;
+    NSURL *soundToPlay;
+    id<ZXingDelegate> delegate;
+    BOOL wasCancelled;
+    BOOL oneDMode;
 #if HAS_AVFF
-  AVCaptureSession *captureSession;
-  AVCaptureVideoPreviewLayer *prevLayer;
+    AVCaptureSession *captureSession;
+    AVCaptureVideoPreviewLayer *prevLayer;
 #endif
-  BOOL decoding;
-  BOOL isStatusBarHidden;
+    BOOL decoding;
+    BOOL isStatusBarHidden;
 }
 
 #if HAS_AVFF
@@ -60,6 +60,7 @@
 @property (nonatomic, retain) NSURL *soundToPlay;
 @property (nonatomic, retain) ParsedResult *result;
 @property (nonatomic, retain) OverlayView *overlayView;
+@property (nonatomic, retain) UILabel *debugLabel;
 
 - (id)initWithDelegate:(id<ZXingDelegate>)delegate showCancel:(BOOL)shouldShowCancel OneDMode:(BOOL)shouldUseoOneDMode;
 - (id)initWithDelegate:(id<ZXingDelegate>)scanDelegate showCancel:(BOOL)shouldShowCancel OneDMode:(BOOL)shouldUseoOneDMode showLicense:(BOOL)shouldShowLicense;
@@ -67,6 +68,9 @@
 - (BOOL)fixedFocus;
 - (void)setTorch:(BOOL)status;
 - (BOOL)torchIsOn;
+- (void) stopScanAnimation;
+- (void) startScanAnimation;
+- (void) resetQRScanner;
 
 @end
 

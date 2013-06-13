@@ -21,13 +21,13 @@
 @interface OverlayView : UIView {
 	NSMutableArray *_points;
 	UIButton *cancelButton;
-  UILabel *instructionsLabel;
+    UILabel *instructionsLabel;
 	id<CancelDelegate> delegate;
 	BOOL oneDMode;
-  BOOL cancelEnabled;
-  CGRect cropRect;
-  NSString *displayedMessage;
-  NSString *cancelButtonTitle;
+    BOOL cancelEnabled;
+    CGRect cropRect;
+    NSString *displayedMessage;
+    NSString *cancelButtonTitle;
 }
 
 @property (nonatomic, retain) NSMutableArray*  points;
