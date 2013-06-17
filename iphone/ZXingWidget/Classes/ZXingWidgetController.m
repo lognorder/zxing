@@ -45,7 +45,7 @@
 @property BOOL showLicense;
 @property BOOL oneDMode;
 @property BOOL isStatusBarHidden;
-@property (nonatomic, strong) UIView *animationView;
+@property (nonatomic, strong) UIImageView *animationView;
 @property (nonatomic, strong) UITextView *scanTipView;
 @property (nonatomic, assign) CGRect viewPort;
 @property (nonatomic, strong) UIView *viewPortView;
@@ -110,7 +110,7 @@
 }
 
 -(void) initialScanLineAnimation{
-    self.animationView.backgroundColor = [UIColor greenColor];
+//    self.animationView.backgroundColor = [UIColor greenColor];
     if(self.animationView.superview == nil){
         [self.viewPortView addSubview:self.animationView];
     }
@@ -153,7 +153,8 @@
 
 -(UIView *) animationView{
     if(_animationView == nil){
-        _animationView = [[UIView alloc] initWithFrame:CGRectZero];
+        _animationView = [[UIImageView alloc] initWithFrame:CGRectZero];
+        _animationView.image = [UIImage imageNamed:@"Scan-line.png"];
     }
     return _animationView;
 }
@@ -243,7 +244,10 @@
     [self.blackOverlayView setNeedsDisplay];
     self.blackOverlayView.frame = self.view.bounds;
     self.animationView.center = CGPointMake(self.viewPortView.bounds.size.width/2, 0);
-    self.animationView.bounds = CGRectMake(0, 0, self.viewPortView.bounds.size.width, 5);
+    CGFloat animationViewWidth = self.viewPortView.bounds.size.width;
+    CGFloat animationViewHeight = 10;
+    
+    self.animationView.bounds = CGRectMake(0, 0, animationViewWidth, animationViewHeight);
     self.scanTipView.center = CGPointMake(self.viewPortView.center.x, self.viewPortView.center.y + self.viewPortView.bounds.size.height/2 + 30);
     [self resetScanlineAnimation];
     
@@ -262,7 +266,7 @@
     [UIView setAnimationRepeatCount:FLT_MAX];
     [UIView setAnimationDelegate:self];
     [UIView setAnimationCurve:UIViewAnimationCurveLinear];
-    self.animationView.center = CGPointMake(self.viewPortView.bounds.size.width/2, self.viewPortView.bounds.size.height);
+    self.animationView.center = CGPointMake(self.viewPortView.bounds.size.width/2, self.viewPortView.bounds.size.height-self.animationView.bounds.size.height/2);
     [UIView commitAnimations];
 }
 
